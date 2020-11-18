@@ -4,29 +4,44 @@
 }
 
 .wrapper {
+  background-color: purple;
   width: 100vw;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-.wrapper .container {
-  width: 800px;
-  height: 400px;
+.wrapper .form-fields {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper .container {
+  width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -34,8 +49,9 @@
 
 .wrapper .container .completed-list, .wrapper .container .todo-list {
   width: 300px;
-  height: 400px;
-  background-color: gray;
+  border-radius: 5px;
+  min-height: 200px;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,16 +59,46 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 10px;
+  padding: 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: -5x 0;
 }
 
 .wrapper .container .completed-list .todo-row, .wrapper .container .todo-list .todo-row {
   width: 100%;
-  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  border-radius: 10px;
   background-color: red;
-  border: 1px black solid;
   margin: 3px 0;
+}
+
+.wrapper .container .completed-list .todo-row .listNum, .wrapper .container .todo-list .todo-row .listNum {
+  margin-right: 5px;
+}
+
+.wrapper .container .completed-list .todo-row .check, .wrapper .container .todo-list .todo-row .check {
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.wrapper .container .completed-list .todo-row .edit, .wrapper .container .todo-list .todo-row .edit {
+  margin-left: auto;
+  padding: 0 5px;
+}
+
+.wrapper .container .completed-list .todo-row .delete, .wrapper .container .todo-list .todo-row .delete {
+  margin-left: 10px;
+  padding: 0 5px;
+}
+
+.wrapper .container .completed-list .important, .wrapper .container .todo-list .important {
+  background-color: blue;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

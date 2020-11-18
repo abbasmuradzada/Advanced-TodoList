@@ -8,12 +8,38 @@
 </head>
 <body>
     <div class="wrapper">
-        <button>add</button>
+        <div class="form-fields">
+            <form>
+                <input class="todo-input" type="text">
+                <select name="" id="" class="rank">
+                    <option value="simple">Simple</option>
+                    <option value="important">Important</option>
+                </select>
+                <button type="submit" class="add">add</button>
+            </form>
+            <form>
+                <input class="edit" type="text">
+                <button type="submit" class="edit-btn" disabled>edit</button>
+            </form>
+        </div>
         <div class="container">
             <div class="todo-list">
-                <div draggable="true" id='a1' class="todo-row"></div>
-                <div draggable="true" id='a2' class="todo-row"></div>
+                <div id='1' class="todo-row" draggable="true">
+                    <input class="check" type="checkbox">
+                    <span class="listNum">1.</span>
+                    <span class="todoContent"> task example</span>
+                    <button class="edit">edit</button>
+                    <button class="delete">x</button>
+                </div>
+                <div id='2' class="todo-row" draggable="true">
+                    <input class="check" type="checkbox">
+                    <span class="listNum">2.</span>
+                    <span class="todoContent"> task example 2</span>
+                    <button class="edit">edit</button>
+                    <button class="delete">x</button>
+                </div>
             </div>
+
             <div class="completed-list"></div>
         </div>
     </div>
