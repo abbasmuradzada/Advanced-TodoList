@@ -1,10 +1,71 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.todo-input, input.edit {
+  width: 250px;
+  height: 30px;
+}
+
+.add, .edit-btn, select {
+  height: 30px;
+  border: none;
+  padding: 0 5px;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 .wrapper {
-  background-color: purple;
+  background-color: black;
   width: 100vw;
   height: 100vh;
   display: -webkit-box;
@@ -28,10 +89,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 800px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 40px 0;
 }
 
 .wrapper .container {
@@ -76,6 +138,9 @@
   border-radius: 10px;
   background-color: red;
   margin: 3px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .wrapper .container .completed-list .todo-row .listNum, .wrapper .container .todo-list .todo-row .listNum {
@@ -89,16 +154,15 @@
 
 .wrapper .container .completed-list .todo-row .edit, .wrapper .container .todo-list .todo-row .edit {
   margin-left: auto;
-  padding: 0 5px;
+  padding: 5px 10px;
 }
 
 .wrapper .container .completed-list .todo-row .delete, .wrapper .container .todo-list .todo-row .delete {
   margin-left: 10px;
-  padding: 0 5px;
+  padding: 5px;
 }
 
 .wrapper .container .completed-list .important, .wrapper .container .todo-list .important {
   background-color: blue;
   color: white;
 }
-/*# sourceMappingURL=style.css.map */

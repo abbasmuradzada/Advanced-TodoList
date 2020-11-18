@@ -15,45 +15,54 @@ let counter=todoRow.length + 1;
 
 // CReate todoRow with input
 addBtn.addEventListener('click',  (event)=> {
-    event.preventDefault();
-    // add To Do Row
-    let row = document.createElement('div');
-    row.id=counter;
-    row.className = todoRank.value == 'important' ? "todo-row important" : "todo-row";
-    row.setAttribute('draggable', 'true')
-    todoList.appendChild(row);    
-    // add checkbox
-    let input = document.createElement('input');
-    input.setAttribute('type', 'checkbox')
-    input.className="check";
-    row.appendChild(input);
-    // add number
-    let num = document.createElement('span');
-    num.className="listNum";
-    num.innerText=`${counter}. `;
-    row.appendChild(num);
-    // add text content
-    let spanContent = document.createElement('span');
-    spanContent.innerText=` ${todoInput.value}`
-    spanContent.className="todoContent"
-    row.appendChild(spanContent);
-    // add edit btn
-    let editBtn = document.createElement('button');
-    editBtn.className=('edit');
-    editBtn.innerText='edit';
-    row.appendChild(editBtn);
-    // add delete btn
-    let deleteBtn = document.createElement('button');
-    deleteBtn.className=('delete');
-    deleteBtn.innerText='x';
-    row.appendChild(deleteBtn);
+    if (todoInput.value.length) {
+        event.preventDefault();
+        // add To Do Row
+        let row = document.createElement('div');
+        row.id=counter;
+        row.className = todoRank.value == 'important' ? "todo-row important" : "todo-row";
+        row.setAttribute('draggable', 'true')
+        todoList.appendChild(row);    
+        // add checkbox
+        let input = document.createElement('input');
+        input.setAttribute('type', 'checkbox')
+        input.className="check";
+        row.appendChild(input);
+        // add number
+        let num = document.createElement('span');
+        num.className="listNum";
+        num.innerText=`${counter}. `;
+        row.appendChild(num);
+        // add text content
+        let spanContent = document.createElement('span');
+        spanContent.innerText=` ${todoInput.value}`
+        spanContent.className="todoContent"
+        row.appendChild(spanContent);
+        // add edit btn
+        let editBtn = document.createElement('button');
+        editBtn.className=('edit');
+        let editI = document.createElement('i');
+        editI.className='far fa-edit';
+        editBtn.append(editI)
+        row.appendChild(editBtn);
+        // add delete btn
+        let deleteBtn = document.createElement('button');
+        deleteBtn.className=('delete');
+        let deleteI = document.createElement('i');
+        deleteI.className='far fa-trash-alt';
+        deleteBtn.append(deleteI)
+        row.appendChild(deleteBtn);
 
-    todoInput.value='';
-    counter++;
-    renderTodoList()
-    clickCheckBox();
-    deleteToDoRow();
-    editToDoRow();
+        todoInput.value='';
+        counter++;
+        renderTodoList()
+        clickCheckBox();
+        deleteToDoRow();
+        editToDoRow();
+    }else{
+        alert("You cannot enter empty task")
+    }
+    
 })
 
 // Remove Element
@@ -65,6 +74,7 @@ var deleteToDoRow = () => {
         })
     });
 }
+deleteToDoRow();
 
 // Edit Element
 var editToDoRow = () => {
@@ -72,6 +82,7 @@ var editToDoRow = () => {
     editBtns.forEach(element => {
         element.addEventListener('click', () => {
             editBtn.removeAttribute('disabled');
+            editInput.removeAttribute('disabled');
             editInput.value = element.previousElementSibling.innerText;
             editInput.focus();
             editedElementId=element.parentElement.id;
@@ -85,8 +96,9 @@ editBtn.addEventListener('click', (event) => {
     document.getElementById(editedElementId).querySelector('.todoContent').innerText = editInput.value;
     editInput.value='';
     editBtn.setAttribute('disabled', 'true');
+    editInput.setAttribute('disabled', 'true'   );
     editInput.blur();
-
+    editedElementId = null;
 })
 
 // In drag starting take element 

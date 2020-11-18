@@ -1,10 +1,13 @@
+@import './details/reset';
+@import './details/common';
+
 *{
     margin: 0;
     padding: 0;
 }
 
 .wrapper{
-    background-color: purple;
+background-color: black;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -15,8 +18,9 @@
     flex-direction: column;
     .form-fields{
         display: flex;
-        width: 100%;
+        width: 800px;
         justify-content: space-between;
+        margin: 40px 0;
     }
     .container{
         width: 800px;
@@ -41,6 +45,7 @@
                 border-radius: 10px;
                 background-color: red;
                 margin: 3px 0;
+                align-items: center;
                 .listNum{
                     margin-right: 5px;
                 }
@@ -50,11 +55,11 @@
                 }
                 .edit{
                     margin-left: auto;
-                    padding: 0 5px;
+                    padding: 5px 10px;
                 }
                 .delete{
                     margin-left: 10px;
-                    padding: 0 5px;
+                    padding: 5px;
                 }
             }
             .important{
