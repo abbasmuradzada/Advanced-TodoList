@@ -48,15 +48,8 @@ table {
   border-spacing: 0;
 }
 
-.todo-input, input.edit {
-  width: 250px;
-  height: 30px;
-}
-
-.add, .edit-btn, select {
-  height: 30px;
-  border: none;
-  padding: 0 5px;
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
 * {
@@ -65,7 +58,7 @@ table {
 }
 
 .wrapper {
-  background-color: black;
+  background-color: #D0D0D0;
   width: 100vw;
   height: 100vh;
   display: -webkit-box;
@@ -89,15 +82,36 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 800px;
+  width: 1000px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 40px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #FF5733;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.wrapper .form-fields input {
+  padding: 5px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 250px;
+}
+
+.wrapper .form-fields button, .wrapper .form-fields select {
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
 }
 
 .wrapper .container {
-  width: 800px;
+  width: 1000px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,10 +124,10 @@ table {
 }
 
 .wrapper .container .completed-list, .wrapper .container .todo-list {
-  width: 300px;
+  width: 400px;
   border-radius: 5px;
   min-height: 200px;
-  background-color: white;
+  background-color: #FF5733;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,7 +150,7 @@ table {
           box-sizing: border-box;
   padding: 10px;
   border-radius: 10px;
-  background-color: red;
+  background-color: #fff;
   margin: 3px 0;
   -webkit-box-align: center;
       -ms-flex-align: center;

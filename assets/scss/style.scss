@@ -7,7 +7,7 @@
 }
 
 .wrapper{
-background-color: black;
+background-color: #D0D0D0;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -18,20 +18,38 @@ background-color: black;
     flex-direction: column;
     .form-fields{
         display: flex;
-        width: 800px;
+        width: 1000px;
         justify-content: space-between;
         margin: 40px 0;
+        box-sizing: border-box;
+        background-color: #FF5733;
+        padding: 10px;
+        border-radius: 5px;
+        input{
+            padding: 5px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            height: 30px;
+            width: 250px;
+        }
+        button, select{
+            height: 40px;
+            border-radius: 5px;
+            border: none;
+            padding: 10px;
+        }
     }
     .container{
-        width: 800px;
+        width: 1000px;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
         .completed-list, .todo-list{
-            width: 300px;
+            width: 400px;
             border-radius: 5px;
             min-height: 200px;
-            background-color: white;
+            background-color: #FF5733;
             display: flex;
             flex-direction: column;
             padding: 5px;
@@ -43,7 +61,7 @@ background-color: black;
                 box-sizing: border-box;
                 padding: 10px;
                 border-radius: 10px;
-                background-color: red;
+                background-color: #fff;
                 margin: 3px 0;
                 align-items: center;
                 .listNum{
