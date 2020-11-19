@@ -82,11 +82,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 1000px;
+  width: 62.5rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 40px 0;
+  margin: 2.5rem 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #FF5733;
@@ -94,24 +94,48 @@ body {
   border-radius: 5px;
 }
 
+@media screen and (max-width: 62.5rem) {
+  .wrapper .form-fields {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 95vw;
+    margin: 20px 0;
+  }
+}
+
 .wrapper .form-fields input {
-  padding: 5px;
+  padding: 0.25rem;
   outline: none;
   border: none;
   border-radius: 5px;
-  height: 30px;
-  width: 250px;
+  height: 2rem;
+  width: 15.5rem;
+}
+
+@media screen and (max-width: 62.5rem) {
+  .wrapper .form-fields input {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 11rem;
+  }
+  .wrapper .form-fields input:first-child {
+    margin-bottom: 30px;
+  }
 }
 
 .wrapper .form-fields button, .wrapper .form-fields select {
-  height: 40px;
-  border-radius: 5px;
+  height: 2.5rem;
+  border-radius: 0.25rem;
   border: none;
-  padding: 10px;
+  padding: 0.5rem;
 }
 
 .wrapper .container {
-  width: 1000px;
+  width: 62.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,10 +147,23 @@ body {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 62.5rem) {
+  .wrapper .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .wrapper .container .completed-list, .wrapper .container .todo-list {
-  width: 400px;
+  width: 25rem;
   border-radius: 5px;
-  min-height: 200px;
+  min-height: 12.5rem;
   background-color: #FF5733;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -135,10 +172,17 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 5px;
+  padding: 0.5rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: -5x 0;
+  margin: -0.25rem 0;
+}
+
+@media screen and (max-width: 62.5rem) {
+  .wrapper .container .completed-list, .wrapper .container .todo-list {
+    margin-bottom: 30px;
+    width: 95vw;
+  }
 }
 
 .wrapper .container .completed-list .todo-row, .wrapper .container .todo-list .todo-row {
@@ -148,17 +192,17 @@ body {
   display: flex;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 10px;
+  padding: 0.75rem;
   border-radius: 10px;
   background-color: #fff;
-  margin: 3px 0;
+  margin: 0.25rem 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .wrapper .container .completed-list .todo-row .listNum, .wrapper .container .todo-list .todo-row .listNum {
-  margin-right: 5px;
+  margin-right: 0.25rem;
 }
 
 .wrapper .container .completed-list .todo-row .check, .wrapper .container .todo-list .todo-row .check {
@@ -168,15 +212,15 @@ body {
 
 .wrapper .container .completed-list .todo-row .edit, .wrapper .container .todo-list .todo-row .edit {
   margin-left: auto;
-  padding: 5px 10px;
+  padding: 0.25rem 0.8rem;
 }
 
 .wrapper .container .completed-list .todo-row .delete, .wrapper .container .todo-list .todo-row .delete {
-  margin-left: 10px;
-  padding: 5px;
+  margin-left: 0.8rem;
+  padding: .25rem;
 }
 
 .wrapper .container .completed-list .important, .wrapper .container .todo-list .important {
-  background-color: blue;
-  color: white;
+  background-color: #1D8995;
+  color: #fff;
 }

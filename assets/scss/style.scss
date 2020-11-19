@@ -1,6 +1,8 @@
 @import './details/reset';
 @import './details/common';
 
+$orange : #FF5733;
+
 *{
     margin: 0;
     padding: 0;
@@ -18,54 +20,75 @@ background-color: #D0D0D0;
     flex-direction: column;
     .form-fields{
         display: flex;
-        width: 1000px;
+        width: 62.5rem;
         justify-content: space-between;
-        margin: 40px 0;
+        margin: 2.5rem 0;
         box-sizing: border-box;
-        background-color: #FF5733;
+        background-color: $orange;
         padding: 10px;
         border-radius: 5px;
+        @media screen and (max-width: 62.5rem) {
+            flex-direction: column;
+            width: 95vw; 
+            margin: 20px 0;
+        }
         input{
-            padding: 5px;
+            padding: 0.25rem;
             outline: none;
             border: none;
             border-radius: 5px;
-            height: 30px;
-            width: 250px;
+            height: 2rem;
+            width: 15.5rem;
+            @media screen and (max-width: 62.5rem) {
+                flex-direction: column;
+                width: 11rem;
+                &:first-child{
+                    margin-bottom: 30px;
+                }
+            }
         }
         button, select{
-            height: 40px;
-            border-radius: 5px;
+            height: 2.5rem;
+            border-radius: 0.25rem;
             border: none;
-            padding: 10px;
+            padding: 0.5rem;
         }
     }
     .container{
-        width: 1000px;
+        width: 62.5rem;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        @media screen and (max-width: 62.5rem) {
+            flex-direction: column;
+            width: 100vw;
+            align-items: center; 
+        }
         .completed-list, .todo-list{
-            width: 400px;
+            width: 25rem;
             border-radius: 5px;
-            min-height: 200px;
-            background-color: #FF5733;
+            min-height: 12.5rem;
+            background-color: $orange;
             display: flex;
             flex-direction: column;
-            padding: 5px;
+            padding: 0.5rem;
             box-sizing: border-box;
-            margin: -5x 0;
+            margin: -0.25rem 0;
+            @media screen and (max-width: 62.5rem) {
+                margin-bottom: 30px;
+                width: 95vw; 
+            }
             .todo-row{
                 width: 100%;
                 display: flex;
                 box-sizing: border-box;
-                padding: 10px;
+                padding: 0.75rem;
                 border-radius: 10px;
                 background-color: #fff;
-                margin: 3px 0;
+                margin: 0.25rem 0;
                 align-items: center;
                 .listNum{
-                    margin-right: 5px;
+                    margin-right: 0.25rem;
                 }
                 .check{
                     margin-right: 10px;
@@ -73,16 +96,16 @@ background-color: #D0D0D0;
                 }
                 .edit{
                     margin-left: auto;
-                    padding: 5px 10px;
+                    padding: 0.25rem 0.8rem;
                 }
                 .delete{
-                    margin-left: 10px;
-                    padding: 5px;
+                    margin-left: 0.8rem;
+                    padding: .25rem;
                 }
             }
             .important{
-                background-color: blue;
-                color: white;
+                background-color: #1D8995;
+                color: #fff;
             }
         }
     }
